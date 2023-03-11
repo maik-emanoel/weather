@@ -123,7 +123,7 @@ h3 {
     margin: auto;
     padding: 14.4rem 0;
 
-    animation: appear .7s 1s backwards;
+    animation: appear .7s .5s backwards;
 }
 
 main {
