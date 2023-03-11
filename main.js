@@ -26,8 +26,8 @@ window.addEventListener('load', () => {
         coordResults(lat, long)
     }
 
-    function showError(error) {
-        alert(`Erro: ${error.message}`)
+    function showError() {
+        alert('Para obter informações climáticas da sua região, por favor ative a geolocalização do seu navegador.')
     }
 })
 
