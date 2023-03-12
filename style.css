@@ -27,6 +27,7 @@ body {
     font-size: 1.6rem;
 
     background: url(./assets/background.jpg) no-repeat center/cover;
+    overflow-x: hidden;
 }
 
 .main-temp {
