@@ -1,9 +1,10 @@
+const app = document.querySelector('#app')
 const temp = document.querySelector('.main-temp')
 const description = document.querySelector('.description')
 const city = document.querySelector('.place')
 const wind = document.querySelector('.wind .info')
 const humidity = document.querySelector('.humidity .info')
-console.log(humidity)
+const footer = document.querySelector('footer')
 
 const api = {
     key: '5499337e5165c2d553efb6f9d6d1eee1',
@@ -20,14 +21,19 @@ window.addEventListener('load', () => {
     }
 
     function setPosition(position) {
-        console.log(position)
         let lat = position.coords.latitude
         let long = position.coords.longitude
         coordResults(lat, long)
+        appearFooter()
     }
 
     function showError() {
         alert('Para obter informações climáticas da sua região, por favor ative a geolocalização do seu navegador.')
+    }
+
+    function appearFooter() {
+        footer.style.display = 'block'
+        app.style.padding = '14.4rem 0 0'
     }
 })
 
@@ -44,7 +50,7 @@ async function coordResults(lat, long) {
 
 function displayResults(weather) {
     const weatherDescription = weather.weather[0].description
-    console.log(weather)
+
     temp.innerHTML = `
     ${Math.round(weather.main.temp)}<sup>°C</sup>
     `
